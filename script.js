@@ -9,8 +9,7 @@ qrGenerate.addEventListener("click", () => {
   if (regex.test(linkInput.value)) {
     qrContainer.style.display = "block";
     downloadBtn.style.display = "inline-block";
-    qrContainer.firstChild.remove();
-    qrContainer.lastChild.remove();
+    qrContainer.innerHTML = "";
     let qrcode = new QRCode(qrContainer, {
       text: linkInput.value,
       width: 256,
