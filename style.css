@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Winky Rough", sans-serif;
   background-color: var(--primary);
@@ -20,7 +24,7 @@ body {
 
 .main-section {
   background-color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -51,10 +55,8 @@ input[type="text"]:focus {
 .qr-container {
   border: 1px solid var(--secondary);
   border-radius: 5px;
-}
-
-.qr-img {
-  width: 20rem;
+  padding: 10px;
+  display: none;
 }
 
 .gen-btn {
@@ -72,4 +74,9 @@ input[type="text"]:focus {
 
 .gen-btn:hover {
   background-color: rgb(0, 0, 201);
+}
+
+.download-btn {
+  display: none;
+  margin-top: 1rem;
 }
