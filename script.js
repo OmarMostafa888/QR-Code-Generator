@@ -21,6 +21,7 @@ qrGenerate.addEventListener("click", () => {
     qrContainer.lastChild.classList.add("qr-img");
     downloadBtn.addEventListener("click", () => {
       qrDownloadLink.href = document.querySelector(".qr-img").src;
+      qrDownloadLink.download = "QR-Code.jpg";
     });
   } else {
     alert("Please make sure your URL is right");
