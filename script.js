@@ -20,8 +20,14 @@ qrGenerate.addEventListener("click", () => {
     });
     qrContainer.lastChild.classList.add("qr-img");
     downloadBtn.addEventListener("click", () => {
-      qrDownloadLink.href = document.querySelector(".qr-img").src;
-      qrDownloadLink.download = "QR-Code.jpg";
+      const qrCanvas = qrContainer.querySelector("canvas"); // الحصول على الـ canvas
+      qrCanvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob); // تحويل الـ Blob إلى رابط صالح
+        qrDownloadLink.href = url;
+        qrDownloadLink.download = "QR-Code.jpg"; // تحديد الامتداد
+        qrDownloadLink.click(); // محاكاة النقر على الرابط لتحميل الصورة
+        URL.revokeObjectURL(url); // مسح الرابط بعد التحميل
+      }, "image/jpeg");
     });
   } else {
     alert("Please make sure your URL is right");
