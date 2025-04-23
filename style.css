@@ -11,35 +11,48 @@
 
 a {
   text-decoration: none;
+  width: 100%;
+}
+
+hr {
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 body {
-  font-family: "Winky Rough", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   background-color: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 15px;
 }
 
 .main-section {
   background-color: white;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 28rem;
 }
 
 .main-title {
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
   font-size: 1.8rem;
+}
+
+.input-label {
+  margin-bottom: 8px;
+  align-self: flex-start;
 }
 
 input[type="text"] {
   height: 3rem;
-  width: 22rem;
+  width: 100%;
   border-color: rgba(0, 0, 255, 0.479);
   border-radius: 5px;
   border-width: 0.13rem;
@@ -66,10 +79,11 @@ input[type="text"]:focus {
   text-align: center;
   padding: 0.8rem;
   border-radius: 5px;
-  width: 25rem;
+  width: 100%;
   cursor: pointer;
   user-select: none;
   transition: 0.4s;
+  font-size: 18px;
 }
 
 .gen-btn:hover {
@@ -79,4 +93,8 @@ input[type="text"]:focus {
 .download-btn {
   display: none;
   margin-top: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
 }
